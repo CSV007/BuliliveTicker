@@ -115,16 +115,7 @@ function get_matchday()
 		m3 = fm3:read("*a")
 		fm3:close()
 	local j_table_event = json:decode(m3)
-		event1={}
-		event1[1]=j_table_event[1]
-		event1[2]=j_table_event[2]
-		event1[3]=j_table_event[3]
-		event1[4]=j_table_event[4]
-		event1[5]=j_table_event[5]
-		event1[6]=j_table_event[6]
-		event1[7]=j_table_event[7]
-		event1[8]=j_table_event[8]
-		event1[9]=j_table_event[9]
+		event1 = json:decode(m3)
 	end
 	
 	os.execute("wget -O " .. eventtxt2 .. " -U Mozilla '" .. jsonconfig_full .. bldate[2] .. "/se" .. seasonid2 .. "/md" .. matchday2 .. "/'" )
@@ -135,16 +126,7 @@ function get_matchday()
 		m4 = fm4:read("*a")
 		fm4:close()
 	local j_table_event2 = json:decode(m4)
-		event2={}
-		event2[1]=j_table_event2[1]
-		event2[2]=j_table_event2[2]
-		event2[3]=j_table_event2[3]
-		event2[4]=j_table_event2[4]
-		event2[5]=j_table_event2[5]
-		event2[6]=j_table_event2[6]
-		event2[7]=j_table_event2[7]
-		event2[8]=j_table_event2[8]
-		event2[9]=j_table_event2[9]
+		event2 = json:decode(m4)
 	end
 	
 	hb3:hide{no_restore=true}
@@ -608,7 +590,7 @@ function tickertv()
     local dytxt = 40
     local breite = dxpic+dxtxt+dxpic
     local zwischenraum = (SCREEN.END_X - SCREEN.OFF_X - (5*breite)) / 5
-    local xx = SCREEN.OFF_X+(zwischenraum/2) -- wir nehmen die Hälfte von "zwischenraum" für einen schmalen freien linken Abstand vom Rand
+    local xx = SCREEN.OFF_X+(zwischenraum/2) -- wir nehmen die H\E4lfte von "zwischenraum" f\FCr einen schmalen freien linken Abstand vom Rand
     local yy = SCREEN.END_Y
     e={}
     p={}
