@@ -590,7 +590,7 @@ function tickertv()
     local dytxt = 40
     local breite = dxpic+dxtxt+dxpic
     local zwischenraum = (SCREEN.END_X - SCREEN.OFF_X - (5*breite)) / 5
-    local xx = SCREEN.OFF_X+(zwischenraum/2) -- wir nehmen die H\E4lfte von "zwischenraum" f\FCr einen schmalen freien linken Abstand vom Rand
+    local xx = SCREEN.OFF_X+(zwischenraum/2) -- wir nehmen die Haelfte von "zwischenraum" fuer einen schmalen freien linken Abstand vom Rand
     local yy = SCREEN.END_Y
     e={}
     p={}
