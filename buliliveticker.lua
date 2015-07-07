@@ -52,6 +52,7 @@ conf={}
 conf["autostart_pip"]=0
 conf["sekunden"]=30
 conf["hinter_grau"]=0
+conf["remove_pfad"]="Nein"
 n = neutrino()
 ligawahl=1
 
@@ -396,6 +397,9 @@ end
 --tmp-Ordner loeschen
 function beenden()
 	os.execute("rm -rf /tmp/liveticker/")
+	if conf["remove_pfad"] == "Ja" then
+		os.execute("rm -rf " .. pfad)
+	end
 end
 
 --Funktion zum laden der Config
@@ -918,6 +922,8 @@ function addMenue()
 	m:addItem{type="chooser", action="set_var", options={ "aus", "hellgrau", "dunkelgrau", "schwarz" }, id="hinter_grau", value=conf["hinter_grau"], name="PIP-Ergebnisse grau hinterlegt", directkey=RC["4"]}
 	m:addItem{type="separatorline"}
 	m:addItem{type="chooser", action="set_var", options={ "klein", "normal", "gross" }, id="font_size", value=conf["font_size"], name="Schrift anpassen", directkey=RC["5"]}
+	m:addItem{type="separatorline"}
+	m:addItem{type="chooser", action="set_var", options={ "Nein", "Ja" }, id="remove_pfad", value=conf["remove_pfad"], name="Pluginverzeichnis löschen", directkey=RC["6"]}
 	m:addItem{type="separatorline"}
 	m:addItem{type="forwarder", name="Speichern", action="saveConfig", icon="rot", directkey=RC["red"]}
 	m:exec()
