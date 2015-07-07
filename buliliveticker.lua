@@ -2,12 +2,13 @@
 -- (c) Tischi www.coolstream.to
 -- Lizenz: GPL 2
 -- Stand: 29.06.2015
-Pluginversion=" v1.6"
+Pluginversion=" v1.7"
 
 -- CHANGELOG
 -- V1.4 (by PauleFoul)            - Schriftgroesse einstellbar gemacht
 -- V1.5 (by Don de Deckelwech)    - im Liveticker die Koordinaten berechnet anstatt statische Werte zu nehmen, Pluginversionsinfo hinzugefuegt 
--- V1.6 (by Tischi)				- Vereinslogo URL angepasst, Tabellenauswertung angepasst
+-- V1.6 (by Tischi)		- Vereinslogo URL angepasst, Tabellenauswertung angepasst
+-- V1.7 (by Tischi)		- Funktion zum loeschen des Pluginordners im Menue hinzugefuegt
 
 --Eigenen Pfad ermitteln
 function script_path()
